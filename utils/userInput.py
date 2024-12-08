@@ -32,7 +32,7 @@ class UserInteractionTool(BaseTool):
         # Check if session state is initialized for storing user responses
         if "user_response" not in st.session_state:
             # Display query to user in a chat-like assistant interface
-            assistant_message = st.chat_message("assistant", avatar="🤖+🧑")
+            assistant_message = st.chat_message("assistant", avatar="🧑")
             assistant_message.write(user_query)
 
             # Wait for user input

@@ -4,66 +4,14 @@
         {
             "Effect": "Allow",
             "Action": [
-                "kendra:*"
+                "kendra:*",
+                "cloudformation:*",
+                "bedrock:*",
+                "lambda:*",
+                "logs:*",
+                "s3:*"
             ],
-            "Resource": [
-                "arn:aws:kendra:us-east-1:920372989322:index/*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:*"
-            ],
-            "Resource": [
-                "arn:aws:cloudformation:us-east-1:920372989322:stack/kendra-*/*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:CreateRole",
-                "iam:DeleteRole",
-                "iam:PutRolePolicy",
-                "iam:DeleteRolePolicy",
-                "iam:GetRole",
-                "iam:PassRole"
-            ],
-            "Resource": [
-                "arn:aws:iam::920372989322:role/kendra-*",
-                "arn:aws:iam::920372989322:role/Kendra*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "bedrock:InvokeModel",
-                "bedrock:ListFoundationModels"
-            ],
-            "Resource": [
-                "arn:aws:bedrock:us-east-1::foundation-model/*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "lambda:*"
-            ],
-            "Resource": [
-                "arn:aws:lambda:us-east-1:920372989322:function:kendra-*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "logs:CreateLogGroup",
-                "logs:CreateLogStream",
-                "logs:PutLogEvents"
-            ],
-            "Resource": [
-                "arn:aws:logs:us-east-1:920372989322:log-group:/aws/kendra/*",
-                "arn:aws:logs:us-east-1:920372989322:log-group:/aws/kendra/*:log-stream:*"
-            ]
+            "Resource": "*"
         }
     ]
 }
