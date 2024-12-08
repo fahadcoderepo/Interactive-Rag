@@ -22,7 +22,7 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="collapsed",
 )
-st.markdown("### Leveraging the User to Improve Agents in RAG Use Cases")
+st.markdown("### Enhancing LLM Responses with Clarification Tools")
 
 # Clear session state if needed
 if 'user_answer' in st.session_state:
@@ -31,7 +31,7 @@ if 'user_answer' in st.session_state:
 # Agent type selection
 mode = st.selectbox(
     label="Select agent type",
-    options=("Agent with AskHuman tool", "Traditional RAG Agent"),
+    options=("Agent with UserInteractionTool", "Agent wiht Traditional RAG Agent"),
 )
 
 ### PARAMETERS
